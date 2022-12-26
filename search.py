@@ -13,6 +13,8 @@ class Search:
         self.reset()
 
     def reset(self):
+        """Reset the window to original state
+        """
         for i in range(0, 50):
             row = []
             for j in range(0, 45):
@@ -20,6 +22,7 @@ class Search:
             self.tiles.append(row)
 
         self.graphics = Graphics()
+        pg.event.clear()
 
     def _check_click(self) -> tuple[int, int]:
         """Checks for click in pygame window
@@ -53,7 +56,6 @@ class Search:
             # check buttons
             if self.graphics.buttons['reset'].collidepoint(pos):
                 self.reset()
-                pg.event.clear()
             if self.graphics.buttons['bfs'].collidepoint(pos):
                 # self.bfs()
                 print("dfs")
@@ -69,15 +71,6 @@ class Search:
             x = pos[0] // 10
             y = (pos[1] - 50) // 10
             tile = Tile(x, y)
-            self.graphics.color_tile(tile, (135, 135, 135))
-            self.tiles[x][y].visited = True
-
-
-
-def main():
-    search = Search()
-    search.draw_walls()
-    return
-
-if __name__ == "__main__":
-    main()
+            if not tile.is_start() and not tile.is_end() and not tile.visited:
+                self.graphics.color_tile(tile, (135, 135, 135))
+                self.tiles[x][y].visited = True

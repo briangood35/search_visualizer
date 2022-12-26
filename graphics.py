@@ -2,8 +2,9 @@ from tile import *
 import pygame as pg
 
 
-
 class Graphics:
+    """Pygame Graphics Controller
+    """
 
     buttons = {}
     screen:pg.Surface
@@ -19,6 +20,8 @@ class Graphics:
     green = (45, 200, 105)
 
     def __init__(self):
+        """Creates pygame window and draws buttons and grid
+        """
         pg.init()
         self.screen = pg.display.set_mode([self.width, self.height])
         # Initialize screen
