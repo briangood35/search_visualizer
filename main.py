@@ -3,8 +3,7 @@ import search
 
 def main():
     s = search.Search()
-    s.draw_walls()
-    return
+    s.run()
 
 if __name__ == "__main__":
     main()
