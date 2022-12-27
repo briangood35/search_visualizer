@@ -1,7 +1,7 @@
 from graphics import *
 import time
 
-class Search:
+class Visualizer:
     """Search Driver
     """
 
