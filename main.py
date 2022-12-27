@@ -7,5 +7,6 @@ def main():
     v = visualizer.Visualizer()
     v.run()
 
+
 if __name__ == "__main__":
     main()
