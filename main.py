@@ -2,6 +2,8 @@ import search
 
 
 def main():
+    """Main function creates Search class instance and calls run function
+    """
     s = search.Search()
     s.run()
 
