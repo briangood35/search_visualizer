@@ -2,8 +2,9 @@ from tile import *
 import pygame as pg
 
 
-
 class Graphics:
+    """Pygame Graphics Controller
+    """
 
     buttons = {}
     screen:pg.Surface
@@ -19,6 +20,8 @@ class Graphics:
     green = (45, 200, 105)
 
     def __init__(self):
+        """Creates pygame window and draws buttons and grid
+        """
         pg.init()
         self.screen = pg.display.set_mode([self.width, self.height])
         # Initialize screen
@@ -64,7 +67,7 @@ class Graphics:
         # Apply changes to window
         pg.display.flip()
 
-    def color_tile(self, tile:Tile, color:pg.Color):
+    def color_tile(self, coord:Coordinate, color:pg.Color):
         """Colors tile located in grid at (x, y)
 
         Args:
@@ -72,6 +75,6 @@ class Graphics:
             y (int): Y position of tile in grid
             color (pg.Color): RGB color
         """
-        rect = pg.Rect(tile.x*10+1, tile.y*10+51, 9, 9)
+        rect = pg.Rect(coord.x*10+1, coord.y*10+51, 9, 9)
         pg.draw.rect(self.screen, color, rect)
         pg.display.flip()
