@@ -71,8 +71,7 @@ class Graphics:
         """Colors tile located in grid at (x, y)
 
         Args:
-            x (int): X position of tile in grid
-            y (int): Y position of tile in grid
+            coord (int): Coordinate of tile to be colored
             color (pg.Color): RGB color
         """
         rect = pg.Rect(coord.x*10+1, coord.y*10+51, 9, 9)
