@@ -23,6 +23,7 @@ class Graphics:
         """Creates pygame window and draws buttons and grid
         """
         pg.init()
+        pg.display.set_caption('Search Visualizer')
         self.screen = pg.display.set_mode([self.width, self.height])
         # Initialize screen
         self.screen.fill(self.white)
