@@ -1,9 +1,0 @@
-search_visualizer
-=================
-
-.. toctree::
-   :maxdepth: 4
-
-   graphics
-   tile
-   visualizer
