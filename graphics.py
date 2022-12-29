@@ -69,10 +69,10 @@ class Graphics:
         pg.display.flip()
 
     def color_tile(self, coord:Coordinate, color:pg.Color):
-        """Colors tile located in grid at (x, y)
+        """Colors tile located in grid at Coordinate(x, y)
 
         Args:
-            coord (int): Coordinate of tile to be colored
+            coord (tile.Coordinate): Coordinate of tile to be colored
             color (pg.Color): RGB color
         """
         rect = pg.Rect(coord.x*10+1, coord.y*10+51, 9, 9)
