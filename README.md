@@ -8,4 +8,4 @@ Then click either the BFS button to run a breadth-first search or the DFS button
 Red tiles indicate that the tile has been searched, blue tiles are the tiles along the path the search algorithm found from the start tile to the end tile.
 <hr>
 
-Full documentation can be found on my website [here](https://www.briangood.dev/Projects/search_visualizer/html/index.html).
+Full documentation can be found on my website [here](https://www.briangood.dev/Projects/search_visualizer/docs/index.html).
