@@ -23,8 +23,7 @@ class Tile:
         """Tile Initializer
 
         Args:
-            x (int): X position in grid
-            y (int): Y position in grid
+            location (Coordinate): Coordinate located at (x, y) in grid
         """
         self.location = location
         self.parent = None

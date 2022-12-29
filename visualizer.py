@@ -79,7 +79,7 @@ class Visualizer:
         """Checks if a tile is out of bounds of the grid
 
         Args:
-            tile (Tile): Tile to be checked
+            tile (tile.Tile): Tile to be checked
 
         Returns:
             bool: True if tile is out of bounds, False if not
@@ -90,7 +90,7 @@ class Visualizer:
         """Draws path in blue from tile to the start based on the path taken to get to tile
 
         Args:
-            tile (Tile): Tile to draw path from
+            tile (tile.Tile): Tile to draw path from
         """
         while tile.parent is not None:
             color = (40, 200, 255)
@@ -129,7 +129,7 @@ class Visualizer:
         self._draw_path(current)
         return 1
 
-    def dfs(self):
+    def dfs(self) -> int:
         """Depth first search algorithm starting at (10, 10) and going to (40, 35)
 
         Returns:
